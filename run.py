@@ -25,3 +25,4 @@ def generate_text(project_id: str, location: str) -> str:
 project_id="tabelog-genai-gemini-dev"
 location="asia-northeast1"
 generate_text(project_id, location)
+print("success")
