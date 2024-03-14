@@ -2,11 +2,11 @@ import vertexai
 from vertexai.generative_models import GenerativeModel, Part
  
  
-def generate_text(project_id: str, location: str) -> str:
+def generate_text(project_id: str, location: str, model_name: str) -> str:
     # Initialize Vertex AI
     vertexai.init(project=project_id, location=location)
     # Load the model
-    multimodal_model = GenerativeModel("gemini-1.0-pro-vision")
+    multimodal_model = GenerativeModel(model_name)
     # Query the model
     response = multimodal_model.generate_content(
         [
@@ -24,5 +24,6 @@ def generate_text(project_id: str, location: str) -> str:
 # 開発用生成AI専用PJ
 project_id="tabelog-genai-gemini-dev"
 location="asia-northeast1"
-generate_text(project_id, location)
+model_name="gemini-1.0-pro-vision"
+generate_text(project_id, location, model_name)
 print("success")
