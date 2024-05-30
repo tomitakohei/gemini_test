@@ -24,6 +24,6 @@ def generate_text(project_id: str, location: str, model_name: str) -> str:
 # 開発用生成AI専用PJ
 project_id="tabelog-genai-gemini-dev"
 location="asia-northeast1"
-model_name="gemini-1.0-pro-vision"
+model_name="gemini-1.5-pro"
 generate_text(project_id, location, model_name)
 print("success")
